@@ -10,7 +10,6 @@ SUBMISSION_PATH = '/local/grader/uploads'
 PERSONALIZED_CONTENT_PATH = '/local/grader/ex-meta'
 STATIC_URL_HOST_INJECT = 'http://localhost:8080'
 
-CONTAINER_MODE = True
 CONTAINER_SCRIPT = '/srv/docker-compose-run.sh'
 
 DATABASES = {

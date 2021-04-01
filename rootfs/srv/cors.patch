@@ -1,5 +1,5 @@
 diff --git a/grader/settings.py b/grader/settings.py
-index 9eb5b44..a92c7c7 100644
+index 8300aa9..c11ffa4 100644
 --- a/grader/settings.py
 +++ b/grader/settings.py
 @@ -26,6 +26,7 @@ INSTALLED_APPS = (
@@ -10,29 +10,28 @@ index 9eb5b44..a92c7c7 100644
      'staticfileserver', # override for runserver command, thus this needs to be before django contrib one
      'django.contrib.staticfiles',
      'access',
-@@ -38,6 +39,7 @@ MIDDLEWARE_CLASSES = (
+@@ -38,12 +39,15 @@ MIDDLEWARE = [
      # 'django.middleware.security.SecurityMiddleware',
      # 'django.contrib.sessions.middleware.SessionMiddleware',
      # 'django.middleware.csrf.CsrfViewMiddleware',
 +    'corsheaders.middleware.CorsMiddleware',
      'django.middleware.clickjacking.XFrameOptionsMiddleware',
      # 'django.contrib.auth.middleware.AuthenticationMiddleware',
-     # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-@@ -45,6 +47,8 @@ MIDDLEWARE_CLASSES = (
+     # 'django.middleware.locale.LocaleMiddleware',
      'django.middleware.common.CommonMiddleware',
- )
+ ]
  
-+CORS_ORIGIN_ALLOW_ALL = True
++CORS_ALLOW_ALL_ORIGINS = True
 +
  TEMPLATES = [
      {
          'BACKEND': 'django.template.backends.django.DjangoTemplates',
 diff --git a/requirements.txt b/requirements.txt
-index 78e2bb3..42d3bcc 100644
+index 091bffc..b412eb8 100644
 --- a/requirements.txt
 +++ b/requirements.txt
-@@ -7,3 +7,4 @@ lxml==3.6.0
- PyYAML==3.11
- docutils==0.12
- python-magic==0.4.11
-+django-cors-headers ~= 2.4.1
+@@ -4,3 +4,4 @@ requests~=2.25.1
+ PyYAML~=5.4.1
+ docutils==0.16
+ python-magic~=0.4.22
++django-cors-headers ~= 3.7.0
