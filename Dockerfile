@@ -1,4 +1,4 @@
-FROM apluslms/service-base:django-1.9
+FROM apluslms/service-base:django-1.10
 
 COPY rootfs /
 
@@ -8,7 +8,7 @@ ENV CONTAINER_TYPE="grader" \
     GRADER_SECRET_KEY_FILE="/local/grader/secret_key.py" \
     GRADER_AJAX_KEY_FILE="/local/grader/ajax_key.py"
 
-ARG BRANCH=v1.9.0-alpha.2
+ARG BRANCH=v1.9.0-alpha.3
 RUN : \
  && apt_install \
       apt-transport-https \
