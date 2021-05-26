@@ -4,7 +4,7 @@ Note that the MOOC grader only provides hosting of interactive
 course material. The [A-plus front](https://hub.docker.com/r/apluslms/run-aplus-front/)
 is required to display the user interface and to store records in the database.
 
-See the [A-plus template course](https://github.com/apluslms/course-templates)
+See the [A-plus manual course](https://github.com/apluslms/aplus-manual)
 that includes a Docker compose configuration file to develop and test course content.
 
 ### Usage
