@@ -41,6 +41,11 @@ RUN : \
  && find /usr/local/lib/python* -type d -regex '.*/locale/[a-z_A-Z]+' -not -regex '.*/\(en\|fi\|sv\)' -print0 | xargs -0 rm -rf \
  && find /usr/local/lib/python* -type d -name 'tests' -print0 | xargs -0 rm -rf \
 \
+ && export \
+    GRADER_SECRET_KEY="-" \
+    GRADER_AJAX_KEY="-" \
+ && python3 manage.py compilemessages 2>&1 \
+\
   # default course link
  && mkdir -p /srv/grader/courses/ \
  && mkdir -p /srv/courses/default \
