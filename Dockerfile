@@ -8,7 +8,7 @@ ENV CONTAINER_TYPE="grader" \
     GRADER_SECRET_KEY_FILE="/local/grader/secret_key.py" \
     GRADER_AJAX_KEY_FILE="/local/grader/ajax_key.py"
 
-ARG BRANCH=v1.10.1
+ARG BRANCH=v1.10.2
 RUN : \
  && apt_install \
       apt-transport-https \
