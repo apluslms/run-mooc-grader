@@ -1,4 +1,4 @@
-FROM apluslms/service-base:django-1.10
+FROM apluslms/service-base:django-1.11
 
 COPY rootfs /
 
@@ -16,7 +16,6 @@ RUN : \
       # temp
       gnupg curl \
       libmagic1 \
-      zlib1g-dev \
   # install docker-ce
  && curl -LSs https://download.docker.com/linux/debian/gpg | apt-key add - >/dev/null 2>&1 \
  && echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" > /etc/apt/sources.list.d/docker.list \
@@ -59,7 +58,6 @@ RUN : \
  && rm -rf /etc/init.d/ /tmp/* \
  && apt_purge \
       gnupg curl \
-      zlib1g-dev \
  && :
 
 
