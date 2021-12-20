@@ -1,4 +1,4 @@
-FROM apluslms/service-base:django-1.11
+FROM apluslms/service-base:django-1.12
 
 COPY rootfs /
 
@@ -6,9 +6,10 @@ COPY rootfs /
 ENV CONTAINER_TYPE="grader" \
     GRADER_LOCAL_SETTINGS="/srv/grader-cont-settings.py" \
     GRADER_SECRET_KEY_FILE="/local/grader/secret_key.py" \
-    GRADER_AJAX_KEY_FILE="/local/grader/ajax_key.py"
+    GRADER_AJAX_KEY_FILE="/local/grader/ajax_key.py" \
+    grader_NO_DATABASE="true"
 
-ARG BRANCH=v1.10.5
+ARG BRANCH=v1.12.0rc3
 RUN : \
  && apt_install \
       apt-transport-https \
@@ -48,7 +49,6 @@ RUN : \
   # default course link
  && mkdir -p /srv/grader/courses/ \
  && mkdir -p /srv/courses/default \
- && ln -s -T /srv/courses/default /srv/grader/courses/default \
  && chown -R grader.nogroup \
     /srv/courses \
     /srv/grader \
