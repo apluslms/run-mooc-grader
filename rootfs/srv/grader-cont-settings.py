@@ -29,6 +29,7 @@ RUNNER_MODULE_SETTINGS = {
 }
 
 APLUS_AUTH_LOCAL = {
+    "UID": "grader",
     "PRIVATE_KEY": """-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEAweaxw/6dSfIWegPg6y9wrsjSNDZaShQzH9/HsOjcPeIrO8Zu
 xT5iZfaPji7y5m+VYaG+76q0harls9uvYdcpdRD8inrUutd6LvMUInyD6h/OVhlO
@@ -75,6 +76,7 @@ V1kynwJp2AaBuFVpkKDjHyHQJ+yotou01Vksp1kYoX21odjoZCivArEjuwzDEoHt
 qwIDAQAB
 -----END PUBLIC KEY-----""",
     "REMOTE_AUTHENTICATOR_URL": "http://plus:8000/api/v2/get-token/",
+    "REMOTE_AUTHENTICATOR_UID": "aplus",
     "DISABLE_LOGIN_CHECKS": False,
     "DISABLE_JWT_SIGNING": False,
 }
