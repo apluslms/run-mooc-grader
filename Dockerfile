@@ -52,6 +52,7 @@ RUN : \
  && ln -s -T /srv/courses/default /srv/grader/courses/default \
  && chown -R grader.nogroup \
     /srv/courses \
+    /srv/course_store \
     /srv/grader \
 \
   # clean
