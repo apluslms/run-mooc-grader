@@ -1,4 +1,4 @@
-FROM apluslms/service-base:django-1.12
+FROM apluslms/service-base:django-1.13
 
 COPY rootfs /
 
