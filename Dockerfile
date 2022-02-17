@@ -18,8 +18,8 @@ RUN : \
       gnupg curl \
       libmagic1 \
   # install docker-ce
- && curl -LSs https://download.docker.com/linux/debian/gpg | apt-key add - >/dev/null 2>&1 \
- && echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" > /etc/apt/sources.list.d/docker.list \
+ && curl -LSs https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg >/dev/null 2>&1 \
+ && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian bullseye stable" > /etc/apt/sources.list.d/docker.list \
  && apt_install docker-ce \
 \
   # create user
