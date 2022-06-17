@@ -3,6 +3,7 @@ DEBUG = True
 ADMINS = (
 )
 #ALLOWED_HOSTS = ["*"]
+BASE_URL = 'http://localhost:8080'
 
 COURSES_PATH = '/srv/courses'
 COURSE_STORE = '/srv/course_store'
