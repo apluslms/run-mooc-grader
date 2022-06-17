@@ -1,8 +1,8 @@
 diff --git a/grader/settings.py b/grader/settings.py
-index 7d94216..e6fbade 100644
+index 9cfc947..eaab224 100644
 --- a/grader/settings.py
 +++ b/grader/settings.py
-@@ -54,6 +54,7 @@ INSTALLED_APPS = (
+@@ -55,6 +55,7 @@ INSTALLED_APPS = (
      # 'django.contrib.contenttypes',
      # 'django.contrib.sessions',
      # 'django.contrib.messages',
@@ -10,7 +10,7 @@ index 7d94216..e6fbade 100644
      'staticfileserver', # override for runserver command, thus this needs to be before django contrib one
      'django.contrib.staticfiles',
      'access',
-@@ -64,6 +65,7 @@ MIDDLEWARE = [
+@@ -65,6 +66,7 @@ MIDDLEWARE = [
      # 'django.middleware.security.SecurityMiddleware',
      # 'django.contrib.sessions.middleware.SessionMiddleware',
      # 'django.middleware.csrf.CsrfViewMiddleware',
@@ -18,7 +18,7 @@ index 7d94216..e6fbade 100644
      'django.middleware.clickjacking.XFrameOptionsMiddleware',
      # 'django.contrib.auth.middleware.AuthenticationMiddleware',
      # 'django.middleware.locale.LocaleMiddleware',
-@@ -71,6 +73,8 @@ MIDDLEWARE = [
+@@ -72,6 +74,8 @@ MIDDLEWARE = [
      'aplus_auth.auth.django.AuthenticationMiddleware',
  ]
  
@@ -28,11 +28,11 @@ index 7d94216..e6fbade 100644
      (
          'django.template.loaders.filesystem.Loader',
 diff --git a/requirements.txt b/requirements.txt
-index 51305a8..e321bbc 100644
+index 3dbf350..9b3b5c9 100644
 --- a/requirements.txt
 +++ b/requirements.txt
 @@ -6,3 +6,4 @@ docutils ~= 0.17.1
- python-magic ~= 0.4.22
- aplus-auth ~= 0.2.0
- docker ~= 5.0.0
-+django-cors-headers ~= 3.12.0
+ python-magic ~= 0.4.27
+ aplus-auth ~= 0.2.2
+ docker ~= 5.0.3
++django-cors-headers ~= 3.13.0
