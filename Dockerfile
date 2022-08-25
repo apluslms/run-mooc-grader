@@ -1,4 +1,4 @@
-FROM apluslms/service-base:django-1.14
+FROM apluslms/service-base:django-1.15
 
 COPY rootfs /
 
@@ -9,7 +9,7 @@ ENV CONTAINER_TYPE="grader" \
     GRADER_AJAX_KEY_FILE="/local/grader/ajax_key.py" \
     grader_NO_DATABASE="true"
 
-ARG BRANCH=v1.15.0
+ARG BRANCH=v1.16.0
 RUN : \
  && apt_install \
       apt-transport-https \
