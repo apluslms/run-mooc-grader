@@ -25,6 +25,7 @@ RUN : \
   # create user
  && adduser --system --no-create-home --disabled-password --gecos "MOOC-Grader webapp server,,," --home /srv/grader --ingroup nogroup grader \
  && mkdir /srv/grader && chown grader.nogroup /srv/grader \
+ && git config --global --add safe.directory /srv/grader \
 \
  && cd /srv/grader \
 \
