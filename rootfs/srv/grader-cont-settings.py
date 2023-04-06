@@ -23,9 +23,13 @@ RUNNER_MODULE = '/srv/docker_compose_run.py'
 RUNNER_MODULE_SETTINGS = {
     "network": "aplus_default",
     "mounts": {
-        COURSES_PATH: HOST_TMP + '/_courses',
-        local_path_to_data(SUBMISSION_PATH): HOST_TMP + '/_submissions',
+        COURSES_PATH:                                  HOST_TMP + '/_courses',
+        # The symlink /local -> /data/grader seems to be missing somehow nowadays.
+        # Add path mapping for both with and without the symlink.
+        local_path_to_data(SUBMISSION_PATH):           HOST_TMP + '/_submissions',
         local_path_to_data(PERSONALIZED_CONTENT_PATH): HOST_TMP + '/_personalized',
+        SUBMISSION_PATH:                               HOST_TMP + '/_submissions',
+        PERSONALIZED_CONTENT_PATH:                     HOST_TMP + '/_personalized',
     },
 }
 
