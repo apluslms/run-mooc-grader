@@ -21,7 +21,7 @@ index 9cfc947..eaab224 100644
 @@ -72,6 +74,8 @@ MIDDLEWARE = [
      'aplus_auth.auth.django.AuthenticationMiddleware',
  ]
- 
+
 +CORS_ALLOW_ALL_ORIGINS = True
 +
  CACHED_LOADERS = [
@@ -34,5 +34,5 @@ index 4243873..5886328 100644
 @@ -6,3 +6,4 @@ docutils ~= 0.17.1
  python-magic ~= 0.4.27
  aplus-auth ~= 0.2.2
- docker ~= 6.1.3
+ docker ~= 7.1.0
 +django-cors-headers ~= 3.13.0
