@@ -10,7 +10,7 @@ ENV CONTAINER_TYPE="grader" \
     grader_NO_DATABASE="true"
 
 ARG TARGETPLATFORM
-ARG BRANCH=v1.25.0
+ARG BRANCH=v1.26.0
 RUN : \
  && apt_install \
       apt-transport-https \
